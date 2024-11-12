@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --color-fiap: #dc143c;
+    --transition: .5s;
+}
+
+
+ul, ol {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-light);
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--color-fiap);
+}
+
+.container{
+        width:100%;
+        height: 100vh;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(43, 41, 41, 0.3)),
+        url(../images/pexels-infinityadventure-10728303.jpg);
+        color:var(--color-light);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:50% ;
+}
+
+
+
+.header-page {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    
+
+}
+
+.header-menu ul {
+    display: flex;
+    gap: 20px;
+}
+.hero{
+    text-align: center;
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.hero h2{
+    font-size: 8vmin;
+}
+.hero h3{
+    font-size: 6vmin;
+}
+.btn{
+    border: 2px solid var(--color-fiap);
+    padding: 8px 20px;
+    background-color: var(--color-fiap);
+    border-radius: 60px;
+    transition: backgroud-color var(--transition);
+}
+.btn:hover{
+    background-color: transparent;
+}
+
+/* cards */
+
+.cards {
+    width: 90%;
+    min-height: 100vh; 
+    margin: 50px auto;
+    text-align: center;
+}
+
+.cards h2 {
+    font-size: 3vw;
+}
+
+.cards-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 30px;
+    margin: 50px 0;
+}
+
+.card-item{
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow:1px 30px 30px #ccc;
+    padding: 40px 20px;
+    border-radius: 7px;
+    transition: scale var(--transition);
+}
+.card-item:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+.card-item img{
+    width:  75%;
+    border-radius: 7px;
+   
+}
+.card-item p {
+    width: 75%;
+}
+
+/* básico do responsivel */
+@media(width <= 900){
+    .card-item{
+        width: 90;
+    }
+
+}
